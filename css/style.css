@@ -1,0 +1,62 @@
+:root{
+  --teal: #0e9aa7;
+  --teal-dark: #0b7b84;
+  --white: #ffffff;
+  --muted: #6b6b6b;
+  --max-width: 1100px;
+  --radius: 12px;
+  --container-pad: 18px;
+  --shadow: 0 6px 18px rgba(6,6,6,0.08);
+}
+*{box-sizing:border-box}
+body{margin:0;color:#1a1a1a;background:#f7fbfb;font-family: "Helvetica Neue", Arial, sans-serif;line-height:1.5}
+.container{max-width:var(--max-width);margin:0 auto;padding:var(--container-pad)}
+.site-header{background:linear-gradient(90deg,var(--teal),var(--teal-dark));color:var(--white);padding:14px 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 6px}
+.brand{display:flex;align-items:center;text-decoration:none;color:inherit}
+.logo-mark{width:56px;height:56px;border-radius:10px;background:var(--white);color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:700;margin-right:10px}
+.brand-text h1{margin:0;font-size:1.05rem}
+.brand-text .tagline{margin:0;font-size:.85rem;opacity:.95}
+.nav-list{display:flex;gap:12px;list-style:none;margin:0;padding:0}
+.nav-list a{color:var(--white);text-decoration:none;padding:8px;border-radius:8px}
+.nav-list a.active, .nav-list a:hover{background:rgba(255,255,255,0.12)}
+.call-btn{background:var(--white);color:var(--teal-dark);padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+.hero{padding:36px 0}
+.hero-inner{display:flex;gap:30px;align-items:center}
+.hero-text h2{margin:0 0 8px 0;font-size:1.6rem}
+.hero-text .lead{font-size:1.05rem;color:#15333b;margin-bottom:8px}
+.image-placeholder{width:320px;height:220px;border-radius:10px;background:linear-gradient(180deg,var(--teal),#d8f6f8);display:flex;align-items:center;justify-content:center;color:#0b4e52;font-weight:600;box-shadow:var(--shadow)}
+.image-placeholder.small{width:100%;height:140px}
+.image-placeholder[data-label]:after{content:attr(data-label);font-size:.95rem;opacity:.95}
+.card{background:var(--white);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.features{margin-top:28px}
+.features-list{display:flex;gap:18px;list-style:none;padding:0;margin:12px 0 0 0}
+.features-list li{flex:1;background:var(--white);padding:14px;border-radius:12px;box-shadow:var(--shadow);text-align:center}
+footer.site-footer{background:#fff;padding:18px 0;border-top:1px solid #e6f3f3;margin-top:30px}
+.footer-inner{display:flex;gap:18px;justify-content:space-between;align-items:flex-start}
+@media (max-width:900px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .nav-list{flex-wrap:wrap}
+  .features-list{flex-direction:column}
+}
+.testimonials{margin:40px 0}
+.testimonials h3{text-align:center;margin-bottom:20px;font-size:1.3rem;color:var(--teal-dark)}
+.testimonial-grid{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.testimonial-card{background:var(--white);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);flex:1 1 280px;max-width:700px;text-align:left}
+.testimonial-card p{margin:8px 0}
+.client-name{font-weight:600;color:var(--teal-dark);margin-top:6px}
+.link-card{background:var(--white);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:18px}
+.link-card a{font-weight:600;color:var(--teal-dark);text-decoration:none}
+.link-card a:hover{text-decoration:underline}
+.link-card p{margin-top:8px;color:var(--muted);line-height:1.4}
+.services-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin-top:20px}
+.service-card{background:var(--white);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);flex:1 1 280px;max-width:320px}
+.service-card h3{margin-top:0;color:var(--teal-dark)}
+.service-card ul{padding-left:20px;margin:8px 0}
+.service-card p{margin:8px 0;color:var(--muted);line-height:1.4}
+.emergency-card{background:var(--white);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:18px}
+.emergency-card h3{color:var(--teal-dark);margin-top:0}
+.emergency-card p{margin:8px 0;color:var(--muted);line-height:1.4}
+.emergency-card ul{margin:8px 0;padding-left:20px}
+.emergency-card a{color:var(--teal-dark);text-decoration:none;font-weight:600}
+.emergency-card a:hover{text-decoration:underline}
